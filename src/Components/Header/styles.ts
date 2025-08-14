@@ -23,17 +23,23 @@ export const Link = styled.a`
 `
 
 export const LinkItem = styled.a`
+  padding: 8px;
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
   list-style: none;
-  color: ${colors.branco};
+  color: ${colors.pretoForte};
+  border: 1px solid ${colors.pretoForte};
+  border-radius: 8px;
+  cursor: pointer;
 `
 export const BotaoCarrinho = styled.button`
-  font-size: 16px;
+  padding: 8px;
+  border: 1px solid ${colors.laranjaFraco};
+  font-size: 24px;
   font-weight: bold;
-  background-color: ${colors.amareloFraco};
-  color: ${colors.pretoForte};
-  border-radius: 4px;
+  background-color: transparent;
+  color: ${colors.laranjaFraco};
+  border-radius: 8px;
   cursor: pointer;
 `

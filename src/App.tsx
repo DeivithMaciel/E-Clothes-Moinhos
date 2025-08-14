@@ -1,15 +1,20 @@
+import { BrowserRouter } from 'react-router-dom'
+
+import Rotas from './pages/routes'
+
 import Headerbar from './Components/Header'
 import EstiloGlobal from './styles'
-import Hero from './Components/Hero'
-import List from './Components/ListClothes'
+import Footer from './Footer'
 
 function App() {
   return (
     <>
-      <EstiloGlobal />
-      <Headerbar />
-      <Hero />
-      <List />
+      <BrowserRouter>
+        <EstiloGlobal />
+        <Headerbar />
+        <Rotas />
+        <Footer />
+      </BrowserRouter>
     </>
   )
 }

@@ -4,8 +4,8 @@ import logo from '../../assets/images/logo_moinho.png'
 const Headerbar = () => (
   <Header>
     <Navbar className="container">
-      <LinkItem href="#">Categorias de roupas</LinkItem>
-      <Link>
+      <LinkItem>Categorias de roupa</LinkItem>
+      <Link href="/">
         <img src={logo} alt="E-Clothes Moinhos" />
       </Link>
       <BotaoCarrinho> Produto(s) no carrinho: 0 </BotaoCarrinho>
