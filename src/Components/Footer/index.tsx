@@ -36,7 +36,7 @@ const Footer = () => (
           </Link>
         </Items>
       </Sociais>
-      <p>E-Gourmet Moinhos, a sua loga e-commerce de roupas e acessórios</p>
+      <p>E-Gourmet Moinhos, o seu canal com os melhores restaurantes.</p>
       <p>
         {currentYear} - &copy; E-Gourmet Moinhos todos os direitos reservados
       </p>
