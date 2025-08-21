@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 import { colors } from '../../styles'
+import { Link } from 'react-router-dom'
 
 export const Header = styled.header`
   background-color: ${colors.preto};
@@ -18,11 +19,11 @@ export const Navbar = styled.div`
   align-items: center;
   justify-content: space-between;
 `
-export const Link = styled.a`
+export const LinkPointer = styled.a`
   cursor: pointer;
 `
 
-export const LinkItem = styled.a`
+export const LinkItem = styled(Link)`
   padding: 8px;
   font-size: 24px;
   font-weight: bold;
@@ -43,3 +44,4 @@ export const BotaoCarrinho = styled.button`
   border-radius: 8px;
   cursor: pointer;
 `
+export { Link }

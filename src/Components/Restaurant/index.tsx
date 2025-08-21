@@ -3,35 +3,25 @@ import Tag from '../Tag'
 import { Card, DescriBut, Descricao, Infos, Titulo } from './styles'
 
 type Props = {
-  title: string
-  category: string
-  estilo: string
   description: string
-  infos: string[]
   image: string
+  infos: number
+  estilo: string
+  title: string
+  id: number
 }
 
-const Product = ({
-  category,
-  description,
-  image,
-  infos,
-  estilo,
-  title
-}: Props) => (
+const Product = ({ description, image, infos, estilo, title, id }: Props) => (
   <Card>
     <img src={image} alt={title} />
     <Infos>
-      {infos.map((info) => (
-        <Tag key={info}>{info}</Tag>
-      ))}
+      <Tag>{infos}</Tag>
     </Infos>
-    <Tag>{category}</Tag>
     <Tag>{estilo}</Tag>
     <Titulo>{title}</Titulo>
     <DescriBut>
       <Descricao>{description}</Descricao>
-      <LinkItem href="/Casamentos">Saiba mais...</LinkItem>
+      <LinkItem to={`/restaurante/${id}`}>Saiba mais...</LinkItem>
     </DescriBut>
   </Card>
 )

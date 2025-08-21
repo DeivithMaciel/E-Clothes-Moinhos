@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
 import { TagContainer } from '../Tag/styles'
+import { LinkItem } from '../Header/styles'
 
 export const Card = styled.div`
   background-color: ${colors.amareloFraco};
@@ -13,7 +14,9 @@ export const Card = styled.div`
   }
 
   img {
-    width: 320px;
+    width: 490px;
+    height: 360px;
+    object-fit: cover;
   }
 `
 export const Titulo = styled.h3`
@@ -22,10 +25,10 @@ export const Titulo = styled.h3`
   display: block;
   margin-top: 16px;
   margin-bottom: 8px;
+  margin-left: 8px;
 `
 
 export const Descricao = styled.p`
-  padding-bottom: 8px;
   font-size: 14px;
   line-weight: 22px;
   display: block;
@@ -38,16 +41,13 @@ export const Infos = styled.div`
   right: 16px;
 `
 
-export const Botao = styled.button`
-  padding: 4px;
-  font-weight: bold;
-  font-size: 16px;
+export const DescriBut = styled.div`
   display: flex;
-  width: 100%;
-  justify-content: center;
+  text-align: center;
   align-items: center;
-  background-color: ${colors.laranja};
-  color: ${colors.pretoForte};
-  border-radius: 8px;
-  cursor: pointer;
+  gap: 10px;
+
+  ${LinkItem} {
+    font-size: 16px;
+  }
 `

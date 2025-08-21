@@ -1,8 +1,9 @@
 import styled from 'styled-components'
-import { colors } from '../styles'
+import { colors } from '../../styles'
 
 export const Final = styled.div`
   background-color: ${colors.preto};
+  padding-bottom: 16px;
 
   .container {
     display: flex;

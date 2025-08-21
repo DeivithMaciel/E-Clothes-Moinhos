@@ -4,7 +4,7 @@ import Rotas from './pages/routes'
 
 import Headerbar from './Components/Header'
 import EstiloGlobal from './styles'
-import Footer from './Footer'
+import Footer from './Components/Footer'
 
 function App() {
   return (
