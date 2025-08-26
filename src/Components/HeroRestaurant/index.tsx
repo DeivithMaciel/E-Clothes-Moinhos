@@ -1,19 +1,20 @@
-import { Frase, Imagem, Titulo } from './styles'
+import { Imagem, Overlay, Tipo, Titulo } from './styles'
 import { MenuGallery } from '../../pages/Home'
 
-const HeroCasamento = ({
+const Hero = ({
   capa,
-  titulo
-}: Omit<
-  MenuGallery,
-  'id' | 'tipo' | 'avaliacao' | 'descricao' | 'cardapio'
->) => (
-  <Imagem style={{ backgroundImage: `url(${capa})` }}>
-    <div className="container">
-      <Titulo>{titulo}</Titulo>
-      <Frase>Juntos, nos melhores momentos da sua vida.</Frase>
-    </div>
-  </Imagem>
+  titulo,
+  tipo
+}: Omit<MenuGallery, 'id' | 'avaliacao' | 'descricao' | 'cardapio'>) => (
+  <>
+    <Imagem style={{ backgroundImage: `url(${capa})` }}>
+      <div className="container">
+        <Overlay></Overlay>
+        <Tipo>{tipo}</Tipo>
+        <Titulo>{titulo}</Titulo>
+      </div>
+    </Imagem>
+  </>
 )
 
-export default HeroCasamento
+export default Hero

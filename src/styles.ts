@@ -8,7 +8,12 @@ export const colors = {
   preto: '#84817a',
   pretoForte: '#000',
   roxoEscuro: '#474787',
-  amareloFraco: '#ffda79'
+  amareloFraco: '#ffda79',
+  cinzaClaro: '#A3A3A3',
+  backWhite: '#FFF8F2',
+  white: '#ffffff',
+  tagWhite: '#FFEBD9',
+  lightRed: '#E66767'
 }
 
 const EstiloGlobal = createGlobalStyle`
@@ -26,7 +31,7 @@ const EstiloGlobal = createGlobalStyle`
     }
 
     body {
-    background-color: ${colors.branco}
+    background-color: ${colors.backWhite}
   }
 `
 

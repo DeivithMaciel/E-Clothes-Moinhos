@@ -1,12 +1,11 @@
-import logo from '../../assets/images/logo_moinho.png'
-import facebook from '../../assets/images/facebook.png'
-import whatsapp from '../../assets/images/whatsapp.png'
-import twitter from '../../assets/images/twitter.png'
-import instagram from '../../assets/images/instagram.png'
-import { Final, Items, Logo, Sociais } from './styles'
-import { Link } from '../Header/styles'
+import logo from '../../assets/images/logo.png'
 
-const currentYear = new Date().getFullYear()
+import { Final, Items, Logo, Sociais } from './styles'
+import { Link } from '../HeaderHome/styles'
+
+import instagram from '../../assets/images/logo_instagram.png'
+import facebook from '../../assets/images/logo_facebook.png'
+import twitter from '../../assets/images/logo_twitter.png'
 
 const Footer = () => (
   <Final>
@@ -16,29 +15,15 @@ const Footer = () => (
       </Link>
       <Sociais>
         <Items>
-          <Link to={'/'}>
-            <img src={facebook} alt="Facebook" />
-          </Link>
-        </Items>
-        <Items>
-          <Link to={'/'}>
-            <img src={whatsapp} alt="Whats app" />
-          </Link>
-        </Items>
-        <Items>
-          <Link to={'/'}>
-            <img src={twitter} alt="Twitter(X)" />
-          </Link>
-        </Items>
-        <Items>
-          <Link to={'/'}>
-            <img src={instagram} alt="Instagram" />
-          </Link>
+          <img src={instagram} alt="" />
+          <img src={facebook} alt="" />
+          <img src={twitter} alt="" />
         </Items>
       </Sociais>
-      <p>E-Gourmet Moinhos, o seu canal com os melhores restaurantes.</p>
       <p>
-        {currentYear} - &copy; E-Gourmet Moinhos todos os direitos reservados
+        A efood é uma plataforma para divulgação de estabelecimentos, a
+        responsabilidade pela entrega, qualidade dos produtos é toda do
+        estabelecimento contratado.{' '}
       </p>
     </div>
   </Final>

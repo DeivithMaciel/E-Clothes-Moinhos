@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import RestaurantList from '../../Components/RestaurantList'
+import Headerbar from '../../Components/HeaderHome'
 
 export interface FoodItem {
   foto: string
@@ -33,6 +34,7 @@ export const Home = () => {
 
   return (
     <>
+      <Headerbar />
       <RestaurantList restaurant={restaurantes} />
     </>
   )

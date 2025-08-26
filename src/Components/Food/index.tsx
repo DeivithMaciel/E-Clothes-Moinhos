@@ -1,7 +1,6 @@
 import { useState } from 'react'
 
 import { FoodItem } from '../../pages/Home'
-import Tag from '../Tag'
 
 import {
   Botao,
@@ -13,7 +12,8 @@ import {
   Titulo
 } from './styles'
 
-import fechar from '../../assets/images/fechar.png'
+import closeIcon from '../../assets/images/close.png'
+import { LinkItem } from '../HeaderHome/styles'
 
 type FoodProps = {
   food: FoodItem
@@ -26,8 +26,6 @@ const Food = ({ food }: FoodProps) => {
     <>
       <Card key={food.id}>
         <img src={food.foto} alt={food.nome} />
-        <h4>R$: {food.preco}0</h4>
-        <Tag>{food.porcao}</Tag>
         <Titulo>{food.nome}</Titulo>
         <Descricao>{food.descricao}</Descricao>
         <Botao onClick={() => setModalEstaAberta(true)}>
@@ -39,16 +37,18 @@ const Food = ({ food }: FoodProps) => {
           <img src={food.foto} />
           <InfosFood>
             <header>
-              <h4>{food.nome}</h4>
               <img
                 onClick={() => setModalEstaAberta(false)}
-                src={fechar}
+                src={closeIcon}
                 alt="Icone de fechamento"
               />
+              <h4>{food.nome}</h4>
             </header>
             <p>{food.descricao}</p>
-            <p>serve: {food.porcao}</p>
-            <Botao>Adicionar ao carrinho: R${food.preco}0</Botao>
+            <p>serve: de {food.porcao}</p>
+            <LinkItem to={'/'}>
+              Adicionar ao carrinho - R${food.preco}0
+            </LinkItem>
           </InfosFood>
         </ModalContent>
         <div

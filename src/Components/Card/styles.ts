@@ -1,21 +1,29 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
 import { TagContainer } from '../Tag/styles'
-import { LinkItem } from '../Header/styles'
 
 export const Card = styled.div`
-  background-color: ${colors.amareloFraco};
+  background-color: ${colors.white};
   border-radius: 8px;
   padding: 8px;
   position: relative;
+  color: ${colors.lightRed};
+  width: 472px;
+  height: auto;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   ${TagContainer} {
-    margin-right: 8px;
+    padding: 6px 4px;
   }
 
   img {
-    width: 490px;
-    height: 360px;
+    width: 100%;
+    height: 217px;
     object-fit: cover;
   }
 `
@@ -30,10 +38,10 @@ export const Titulo = styled.h3`
 
 export const Descricao = styled.p`
   font-size: 14px;
-  line-weight: 22px;
+  line-height: 22px;
   display: block;
-  margin-top: 16px;
-  color: ${colors.pretoForte};
+  font-weight: normal;
+  padding-bottom: 16px;
 `
 export const Infos = styled.div`
   position: absolute;
@@ -41,13 +49,13 @@ export const Infos = styled.div`
   right: 16px;
 `
 
-export const DescriBut = styled.div`
+export const Score = styled.div`
   display: flex;
-  text-align: center;
   align-items: center;
-  gap: 10px;
 
-  ${LinkItem} {
-    font-size: 16px;
+  img {
+    padding-left: 8px;
+    height: 21px;
+    width: 21px;
   }
 `

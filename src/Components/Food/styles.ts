@@ -1,56 +1,53 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
 import { TagContainer } from '../Tag/styles'
+import { LinkItem } from '../HeaderHome/styles'
 
 export const Card = styled.div`
-  background-color: ${colors.amareloFraco};
+  background-color: ${colors.lightRed};
   border-radius: 8px;
   padding: 8px;
   position: relative;
+  color: ${colors.tagWhite};
+  display: flex;
+  flex-direction: column;
 
   ${TagContainer} {
     margin-right: 8px;
   }
 
   img {
-    width: 320px;
-    height: 320px;
+    width: 304px;
+    height: 167px;
     object-fit: cover;
   }
 `
 export const Titulo = styled.h3`
-  font-weight: bold;
+  font-weight: 900;
   font-size: 16px;
   display: block;
-  margin-top: 16px;
-  margin-bottom: 8px;
+  padding: 8px 0;
 `
 
 export const Descricao = styled.p`
   padding-bottom: 8px;
   font-size: 14px;
-  line-weight: 22px;
+  line-height: 22px;
   display: block;
-  margin-top: 16px;
-  color: ${colors.pretoForte};
-`
-export const Infos = styled.div`
-  position: absolute;
-  top: 16px;
-  right: 16px;
+  font-weight: normal;
 `
 
 export const Botao = styled.button`
   padding: 4px;
   font-weight: bold;
-  font-size: 16px;
-  display: flex;
+  font-size: 14px;
+  margin-top: auto;
   width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: ${colors.laranja};
-  color: ${colors.pretoForte};
-  border-radius: 8px;
+  background-color: ${colors.tagWhite};
+  color: ${colors.lightRed};
+  border: none;
   cursor: pointer;
 `
 
@@ -59,6 +56,7 @@ export const Modal = styled.div`
   display: none;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -70,14 +68,15 @@ export const Modal = styled.div`
   }
 
   .container {
-    max-width: 680px;
-    background-color: ${colors.amareloFraco};
+    max-width: 1024px;
+    background-color: ${colors.lightRed};
   }
 
   img {
     width: 320px;
     height: 320px;
     object-fit: cover;
+    padding: 32px 24px 32px 32px;
   }
 
   .overlay {
@@ -93,6 +92,7 @@ export const Modal = styled.div`
 export const ModalContent = styled.div`
   display: flex;
   z-index: 1;
+  color: ${colors.white};
 `
 
 export const InfosFood = styled.div`
@@ -100,6 +100,12 @@ export const InfosFood = styled.div`
   z-index: 1;
   margin-left: 24px;
   margin-right: 24px;
+
+  ${LinkItem} {
+    padding: 8px;
+    color: ${colors.lightRed};
+    background-color: ${colors.tagWhite};
+  }
 
   > header {
     display: flex;
@@ -109,21 +115,29 @@ export const InfosFood = styled.div`
     margin-top: 8px;
     margin-bottom: 8px;
 
+    h4 {
+      padding-top: 32px;
+      padding-bottom: 24px;
+    }
+
     img {
-      background-color: ${colors.laranja};
-      padding: 2px;
+      position: absolute;
+      top: 8px;
+      right: 8px;
     }
   }
 
   img {
     height: 16px;
     width: 16px;
-    margin-left: 8px;
     cursor: pointer;
     object-fit: cover;
   }
 
   p {
-    margin-bottom: 24px;
+    font-weight: normal;
+    line-height: 22px;
+    font-size: 14px;
+    margin-bottom: 32px;
   }
 `

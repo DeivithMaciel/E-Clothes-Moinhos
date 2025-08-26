@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import FoodList from '../../Components/foodsList'
-import HeroCasamento from '../../Components/HeroRestaurant'
 import { MenuGallery } from '../Home'
 import { useParams } from 'react-router-dom'
+import Headerbar from '../../Components/HeaderPerfil'
+import Hero from '../../Components/HeroRestaurant'
 
 export const RestauranteSelecionado = () => {
   const { id } = useParams<{ id: string }>()
@@ -23,7 +24,12 @@ export const RestauranteSelecionado = () => {
 
   return (
     <>
-      <HeroCasamento titulo={selecionado.titulo} capa={selecionado.capa} />
+      <Headerbar />
+      <Hero
+        titulo={selecionado.titulo}
+        capa={selecionado.capa}
+        tipo={selecionado.tipo}
+      />
       <FoodList foods={selecionado.cardapio} />
     </>
   )
