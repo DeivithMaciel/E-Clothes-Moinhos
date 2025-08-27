@@ -5,7 +5,9 @@ import { FoodItem } from '../../pages/Home'
 import {
   Botao,
   Card,
+  CloseButton,
   Descricao,
+  FoodImage,
   InfosFood,
   Modal,
   ModalContent,
@@ -17,6 +19,13 @@ import { LinkItem } from '../HeaderHome/styles'
 
 type FoodProps = {
   food: FoodItem
+}
+
+export const formatPrice = (preco = 0) => {
+  return new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL'
+  }).format(preco)
 }
 
 const Food = ({ food }: FoodProps) => {
@@ -34,20 +43,18 @@ const Food = ({ food }: FoodProps) => {
       </Card>
       <Modal className={modalEstaAberta ? 'visivel' : ''}>
         <ModalContent className="container">
-          <img src={food.foto} />
+          <FoodImage src={food.foto} />
           <InfosFood>
-            <header>
-              <img
-                onClick={() => setModalEstaAberta(false)}
-                src={closeIcon}
-                alt="Icone de fechamento"
-              />
-              <h4>{food.nome}</h4>
-            </header>
+            <CloseButton
+              onClick={() => setModalEstaAberta(false)}
+              src={closeIcon}
+              alt="Fechar"
+            />
+            <h4>{food.nome}</h4>
             <p>{food.descricao}</p>
             <p>serve: de {food.porcao}</p>
             <LinkItem to={'/'}>
-              Adicionar ao carrinho - R${food.preco}0
+              Adicionar ao carrinho - {formatPrice(food.preco)}
             </LinkItem>
           </InfosFood>
         </ModalContent>

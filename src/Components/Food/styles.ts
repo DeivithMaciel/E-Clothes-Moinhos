@@ -72,13 +72,6 @@ export const Modal = styled.div`
     background-color: ${colors.lightRed};
   }
 
-  img {
-    width: 320px;
-    height: 320px;
-    object-fit: cover;
-    padding: 32px 24px 32px 32px;
-  }
-
   .overlay {
     position: absolute;
     top: 0;
@@ -87,6 +80,12 @@ export const Modal = styled.div`
     height: 100%;
     background-color: rgba(0, 0, 0, 0.73);
   }
+`
+export const FoodImage = styled.img`
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+  padding: 32px 24px 32px 32px;
 `
 
 export const ModalContent = styled.div`
@@ -99,7 +98,7 @@ export const InfosFood = styled.div`
   position: relative;
   z-index: 1;
   margin-left: 24px;
-  margin-right: 24px;
+
 
   ${LinkItem} {
     padding: 8px;
@@ -107,31 +106,10 @@ export const InfosFood = styled.div`
     background-color: ${colors.tagWhite};
   }
 
-  > header {
-    display: flex;
-    max-width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 8px;
-    margin-bottom: 8px;
-
     h4 {
-      padding-top: 32px;
-      padding-bottom: 24px;
+      margin-top: 32px;
+      margin-bottom: 16px;
     }
-
-    img {
-      position: absolute;
-      top: 8px;
-      right: 8px;
-    }
-  }
-
-  img {
-    height: 16px;
-    width: 16px;
-    cursor: pointer;
-    object-fit: cover;
   }
 
   p {
@@ -139,5 +117,15 @@ export const InfosFood = styled.div`
     line-height: 22px;
     font-size: 14px;
     margin-bottom: 32px;
+    margin-right: 24px;
   }
+`
+
+export const CloseButton = styled.img`
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
 `

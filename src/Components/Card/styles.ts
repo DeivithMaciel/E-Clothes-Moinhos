@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
-import { TagContainer } from '../Tag/styles'
+import { LinkItem } from '../HeaderHome/styles'
 
 export const Card = styled.div`
   background-color: ${colors.white};
-  border-radius: 8px;
-  padding: 8px;
   position: relative;
   color: ${colors.lightRed};
   width: 472px;
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   div {
     display: flex;
@@ -17,23 +17,26 @@ export const Card = styled.div`
     align-items: center;
   }
 
-  ${TagContainer} {
-    padding: 6px 4px;
-  }
-
   img {
     width: 100%;
     height: 217px;
     object-fit: cover;
+    padding-bottom: 8px;
+  }
+
+  ${LinkItem} {
+    align-self: flex-start;
+    margin-left: 8px;
+    margin-top: auto;
+    margin-bottom: 8px;
   }
 `
 export const Titulo = styled.h3`
   font-weight: bold;
   font-size: 16px;
   display: block;
-  margin-top: 16px;
-  margin-bottom: 8px;
-  margin-left: 8px;
+  padding-bottom: 16px;
+  padding-left: 8px;
 `
 
 export const Descricao = styled.p`
@@ -42,6 +45,8 @@ export const Descricao = styled.p`
   display: block;
   font-weight: normal;
   padding-bottom: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
 `
 export const Infos = styled.div`
   position: absolute;
@@ -52,6 +57,8 @@ export const Infos = styled.div`
 export const Score = styled.div`
   display: flex;
   align-items: center;
+  padding-right: 8px;
+  padding-bottom: 16px;
 
   img {
     padding-left: 8px;
