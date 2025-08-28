@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import { add, open } from '../../store/reducers/cart'
+
 import { FoodItem } from '../../pages/Home'
 
 import {
@@ -15,7 +17,8 @@ import {
 } from './styles'
 
 import closeIcon from '../../assets/images/close.png'
-import { LinkItem } from '../HeaderHome/styles'
+
+import { useDispatch } from 'react-redux'
 
 type FoodProps = {
   food: FoodItem
@@ -30,6 +33,12 @@ export const formatPrice = (preco = 0) => {
 
 const Food = ({ food }: FoodProps) => {
   const [modalEstaAberta, setModalEstaAberta] = useState(false)
+  const dispatch = useDispatch()
+
+  const addToCart = () => {
+    dispatch(add(food))
+    dispatch(open())
+  }
 
   return (
     <>
@@ -37,9 +46,7 @@ const Food = ({ food }: FoodProps) => {
         <img src={food.foto} alt={food.nome} />
         <Titulo>{food.nome}</Titulo>
         <Descricao>{food.descricao}</Descricao>
-        <Botao onClick={() => setModalEstaAberta(true)}>
-          Adicionar ao carrinho
-        </Botao>
+        <Botao onClick={() => setModalEstaAberta(true)}>Mais detalhes</Botao>
       </Card>
       <Modal className={modalEstaAberta ? 'visivel' : ''}>
         <ModalContent className="container">
@@ -53,9 +60,14 @@ const Food = ({ food }: FoodProps) => {
             <h4>{food.nome}</h4>
             <p>{food.descricao}</p>
             <p>serve: de {food.porcao}</p>
-            <LinkItem to={'/'}>
+            <button
+              onClick={() => {
+                addToCart()
+                setModalEstaAberta(false)
+              }}
+            >
               Adicionar ao carrinho - {formatPrice(food.preco)}
-            </LinkItem>
+            </button>
           </InfosFood>
         </ModalContent>
         <div

@@ -7,6 +7,15 @@ import { colors } from '../../styles'
 export const Header = styled.header`
   background-image: url(${fundo});
   width: 100%;
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: ${colors.lightRed};
+    font-weight: 900;
+    font-size: 18px;
+    cursor: pointer;
+  }
 `
 export const Navbar = styled.div`
   display: flex;

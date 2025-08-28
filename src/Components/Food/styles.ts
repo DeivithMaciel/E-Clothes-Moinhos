@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
 import { TagContainer } from '../Tag/styles'
-import { LinkItem } from '../HeaderHome/styles'
 
 export const Card = styled.div`
   background-color: ${colors.lightRed};
@@ -100,10 +99,12 @@ export const InfosFood = styled.div`
   margin-left: 24px;
 
 
-  ${LinkItem} {
+  button {
     padding: 8px;
+    border: none;
     color: ${colors.lightRed};
     background-color: ${colors.tagWhite};
+    cursor: pointer;
   }
 
     h4 {
