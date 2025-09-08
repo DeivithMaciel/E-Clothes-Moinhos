@@ -4,7 +4,8 @@ export const colors = {
   backWhite: '#FFF8F2',
   white: '#ffffff',
   tagWhite: '#FFEBD9',
-  lightRed: '#E66767'
+  lightRed: '#E66767',
+  formColor: '#4B4B4B'
 }
 
 const EstiloGlobal = createGlobalStyle`

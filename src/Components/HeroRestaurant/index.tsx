@@ -1,5 +1,6 @@
-import { Imagem, Overlay, Tipo, Titulo } from './styles'
 import { MenuGallery } from '../../pages/Home'
+
+import * as S from './styles'
 
 const Hero = ({
   capa,
@@ -7,13 +8,13 @@ const Hero = ({
   tipo
 }: Omit<MenuGallery, 'id' | 'avaliacao' | 'descricao' | 'cardapio'>) => (
   <>
-    <Imagem style={{ backgroundImage: `url(${capa})` }}>
+    <S.Image style={{ backgroundImage: `url(${capa})` }}>
       <div className="container">
-        <Overlay></Overlay>
-        <Tipo>{tipo}</Tipo>
-        <Titulo>{titulo}</Titulo>
+        <S.Overlay></S.Overlay>
+        <S.Type>{tipo}</S.Type>
+        <S.Title>{titulo}</S.Title>
       </div>
-    </Imagem>
+    </S.Image>
   </>
 )
 

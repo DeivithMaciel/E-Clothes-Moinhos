@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react'
-import FoodList from '../../Components/foodsList'
-import { MenuGallery } from '../Home'
 import { useParams } from 'react-router-dom'
+
+import { MenuGallery } from '../Home'
+import FoodList from '../../Components/foodsList'
 import Headerbar from '../../Components/HeaderPerfil'
 import Hero from '../../Components/HeroRestaurant'
 

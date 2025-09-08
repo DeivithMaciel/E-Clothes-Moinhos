@@ -5,11 +5,19 @@ import { FoodItem } from '../../pages/Home'
 type CartSlice = {
   items: FoodItem[]
   isOpen: boolean
+  listItems: boolean
+  deliveryAside: boolean
+  paymentAside: boolean
+  confirmAside: boolean
 }
 
 const initialState: CartSlice = {
   items: [],
-  isOpen: false
+  isOpen: false,
+  listItems: true,
+  deliveryAside: false,
+  paymentAside: false,
+  confirmAside: false
 }
 
 const cartSlice = createSlice({
@@ -32,12 +40,53 @@ const cartSlice = createSlice({
     },
     open: (state) => {
       state.isOpen = true
+      state.listItems = true
+      state.deliveryAside = false
+      state.paymentAside = false
+      state.confirmAside = false
     },
     close: (state) => {
       state.isOpen = false
+    },
+    toDelivery: (state) => {
+      state.listItems = false
+      state.deliveryAside = true
+      state.paymentAside = false
+    },
+    toPayment: (state) => {
+      state.deliveryAside = false
+      state.paymentAside = true
+    },
+    backToCart: (state) => {
+      state.listItems = true
+      state.deliveryAside = false
+    },
+    backToDelivery: (state) => {
+      state.deliveryAside = true
+      state.paymentAside = false
+    },
+    clearItems: (state) => {
+      state.items = []
+    },
+    concluing: (state) => {
+      state.listItems = true
+      state.deliveryAside = false
+      state.paymentAside = false
+      state.confirmAside = false
     }
   }
 })
 
-export const { add, close, open, remove } = cartSlice.actions
+export const {
+  add,
+  close,
+  open,
+  remove,
+  toDelivery,
+  backToCart,
+  toPayment,
+  backToDelivery,
+  clearItems,
+  concluing
+} = cartSlice.actions
 export default cartSlice.reducer

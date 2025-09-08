@@ -1,7 +1,7 @@
-import { Container, List } from './styles'
-
 import { FoodItem } from '../../pages/Home'
 import Food from '../Food'
+
+import { Container, List } from './styles'
 
 type Props = {
   foods: FoodItem[]

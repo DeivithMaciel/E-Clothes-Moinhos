@@ -25,7 +25,7 @@ export const Logo = styled.img`
   padding-top: 40px;
 `
 
-export const Sociais = styled.ul`
+export const SocialMedia = styled.ul`
   display: flex;
   padding-top: 16px;
   padding-bottom: 80px;

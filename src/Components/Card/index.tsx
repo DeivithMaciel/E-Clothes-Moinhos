@@ -1,8 +1,9 @@
 import { LinkItem } from '../HeaderHome/styles'
 import Tag from '../Tag'
-import { Card, Descricao, Infos, Score, Titulo } from './styles'
 
 import estrela from '../../assets/images/estrela.png'
+
+import * as S from './styles'
 
 type Props = {
   description: string
@@ -23,21 +24,21 @@ const Product = ({
   title,
   id
 }: Props) => (
-  <Card>
+  <S.Card>
     <img src={image} alt={title} />
-    <Infos>
+    <S.Infos>
       {destacado && <Tag>Destque da semana</Tag>}
       <Tag>{estilo}</Tag>
-    </Infos>
+    </S.Infos>
     <div>
-      <Titulo>{title}</Titulo>
-      <Score>
+      <S.Title>{title}</S.Title>
+      <S.Score>
         {infos} <img src={estrela} />
-      </Score>
+      </S.Score>
     </div>
-    <Descricao>{description}</Descricao>
+    <S.Description>{description}</S.Description>
     <LinkItem to={`/restaurante/${id}`}>Saiba mais</LinkItem>
-  </Card>
+  </S.Card>
 )
 
 export default Product

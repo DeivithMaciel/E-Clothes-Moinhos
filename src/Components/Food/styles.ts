@@ -21,14 +21,14 @@ export const Card = styled.div`
     object-fit: cover;
   }
 `
-export const Titulo = styled.h3`
+export const Title = styled.h3`
   font-weight: 900;
   font-size: 16px;
   display: block;
   padding: 8px 0;
 `
 
-export const Descricao = styled.p`
+export const Description = styled.p`
   padding-bottom: 8px;
   font-size: 14px;
   line-height: 22px;
@@ -36,7 +36,7 @@ export const Descricao = styled.p`
   font-weight: normal;
 `
 
-export const Botao = styled.button`
+export const Button = styled.button`
   padding: 4px;
   font-weight: bold;
   font-size: 14px;

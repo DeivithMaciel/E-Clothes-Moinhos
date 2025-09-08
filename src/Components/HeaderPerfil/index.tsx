@@ -1,10 +1,11 @@
-import { Header, LinkPointer, Navbar } from './styles'
-import logo from '../../assets/images/logo.png'
-import { LinkItem } from '../HeaderHome/styles'
 import { useDispatch, useSelector } from 'react-redux'
-
-import { open } from '../../store/reducers/cart'
 import { RootReducer } from '../../store'
+
+import { LinkItem } from '../HeaderHome/styles'
+import { open } from '../../store/reducers/cart'
+
+import logo from '../../assets/images/logo.png'
+import * as S from './styles'
 
 const Headerbar = () => {
   const dispatch = useDispatch()
@@ -14,17 +15,17 @@ const Headerbar = () => {
     dispatch(open())
   }
   return (
-    <Header>
-      <Navbar className="container">
+    <S.Header>
+      <S.Navbar className="container">
         <LinkItem to={'/'}>Restaurantes</LinkItem>
-        <LinkPointer href="/">
+        <S.LinkPointer href="/">
           <img src={logo} alt="Efood" />
-        </LinkPointer>
+        </S.LinkPointer>
         <button onClick={openCart}>
           {items.length} produto(s) no carrinho
         </button>
-      </Navbar>
-    </Header>
+      </S.Navbar>
+    </S.Header>
   )
 }
 

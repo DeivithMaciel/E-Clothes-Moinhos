@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 import { colors } from '../../styles'
 
-export const Imagem = styled.div`
+export const Image = styled.div`
   position: relative;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
 `
 
-export const Tipo = styled.h1`
+export const Type = styled.h1`
   font-weight: 100;
   position: relative;
   font-size: 48px;
@@ -18,7 +18,7 @@ export const Tipo = styled.h1`
   z-index: 1;
 `
 
-export const Titulo = styled.h1`
+export const Title = styled.h1`
   padding-bottom: 32px;
   position: relative;
   font-size: 32px;

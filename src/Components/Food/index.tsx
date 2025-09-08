@@ -1,24 +1,12 @@
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 
 import { add, open } from '../../store/reducers/cart'
 
 import { FoodItem } from '../../pages/Home'
 
-import {
-  Botao,
-  Card,
-  CloseButton,
-  Descricao,
-  FoodImage,
-  InfosFood,
-  Modal,
-  ModalContent,
-  Titulo
-} from './styles'
-
 import closeIcon from '../../assets/images/close.png'
-
-import { useDispatch } from 'react-redux'
+import * as S from './styles'
 
 type FoodProps = {
   food: FoodItem
@@ -42,17 +30,19 @@ const Food = ({ food }: FoodProps) => {
 
   return (
     <>
-      <Card key={food.id}>
+      <S.Card key={food.id}>
         <img src={food.foto} alt={food.nome} />
-        <Titulo>{food.nome}</Titulo>
-        <Descricao>{food.descricao}</Descricao>
-        <Botao onClick={() => setModalEstaAberta(true)}>Mais detalhes</Botao>
-      </Card>
-      <Modal className={modalEstaAberta ? 'visivel' : ''}>
-        <ModalContent className="container">
-          <FoodImage src={food.foto} />
-          <InfosFood>
-            <CloseButton
+        <S.Title>{food.nome}</S.Title>
+        <S.Description>{food.descricao}</S.Description>
+        <S.Button onClick={() => setModalEstaAberta(true)}>
+          Mais detalhes
+        </S.Button>
+      </S.Card>
+      <S.Modal className={modalEstaAberta ? 'visivel' : ''}>
+        <S.ModalContent className="container">
+          <S.FoodImage src={food.foto} />
+          <S.InfosFood>
+            <S.CloseButton
               onClick={() => setModalEstaAberta(false)}
               src={closeIcon}
               alt="Fechar"
@@ -68,13 +58,13 @@ const Food = ({ food }: FoodProps) => {
             >
               Adicionar ao carrinho - {formatPrice(food.preco)}
             </button>
-          </InfosFood>
-        </ModalContent>
+          </S.InfosFood>
+        </S.ModalContent>
         <div
           className="overlay"
           onClick={() => setModalEstaAberta(false)}
         ></div>
-      </Modal>
+      </S.Modal>
     </>
   )
 }
