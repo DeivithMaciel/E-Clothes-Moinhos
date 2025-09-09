@@ -18,9 +18,9 @@ const Headerbar = () => {
     <S.Header>
       <S.Navbar className="container">
         <LinkItem to={'/'}>Restaurantes</LinkItem>
-        <S.LinkPointer href="/">
+        <a>
           <img src={logo} alt="Efood" />
-        </S.LinkPointer>
+        </a>
         <button onClick={openCart}>
           {items.length} produto(s) no carrinho
         </button>

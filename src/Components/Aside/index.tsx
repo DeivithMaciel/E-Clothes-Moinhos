@@ -140,7 +140,7 @@ const Aside = () => {
 
   return (
     <>
-      {isOpen && <S.Overlay onClick={closeCart} />}
+      {isOpen && <S.Overlay onClick={isSuccess ? conclussion : closeCart} />}
       <S.AsidePage className={isOpen ? 'is-open' : ''}>
         {isSuccess && data ? (
           <S.List className={paymentAside ? '' : 'payment'}>

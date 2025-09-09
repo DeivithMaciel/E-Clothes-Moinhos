@@ -23,7 +23,7 @@ const EstiloGlobal = createGlobalStyle`
     }
 
     body {
-    background-color: ${colors.backWhite};
+    background-color: ${colors.backWhite}!important;
   }
 `
 

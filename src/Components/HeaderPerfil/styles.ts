@@ -36,6 +36,3 @@ export const Navbar = styled.div`
     width: 125px;
   }
 `
-export const LinkPointer = styled.a`
-  cursor: pointer;
-`

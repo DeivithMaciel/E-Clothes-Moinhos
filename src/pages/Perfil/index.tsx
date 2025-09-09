@@ -5,6 +5,7 @@ import { MenuGallery } from '../Home'
 import FoodList from '../../Components/foodsList'
 import Headerbar from '../../Components/HeaderPerfil'
 import Hero from '../../Components/HeroRestaurant'
+import Loader from '../../Components/Loader'
 
 export const RestauranteSelecionado = () => {
   const { id } = useParams<{ id: string }>()
@@ -20,7 +21,7 @@ export const RestauranteSelecionado = () => {
   }, [id])
 
   if (!selecionado) {
-    return <h3>Carregando...</h3>
+    return <Loader />
   }
 
   return (
