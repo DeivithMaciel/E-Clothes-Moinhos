@@ -12,7 +12,7 @@ export const RestauranteSelecionado = () => {
   const [selecionado, setSelecionado] = useState<MenuGallery>()
 
   useEffect(() => {
-    fetch('https://ebac-fake-api.vercel.app/api/efood/restaurantes')
+    fetch('https://api-ebac.vercel.app/api/efood/restaurantes')
       .then((res) => res.json())
       .then((res: MenuGallery[]) => {
         const restaurante = res.find((r) => r.id === Number(id))
