@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# E-Food
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto desenvolvido como trabalho final da formação Engenheiro Front-End da EBAC.
 
-## Available Scripts
+A aplicação simula uma plataforma de delivery de alimentos, permitindo visualizar restaurantes, consultar cardápios, adicionar produtos ao carrinho e concluir pedidos através de um fluxo completo de checkout.
 
-In the project directory, you can run:
+## Tecnologias
 
-### `npm start`
+- React
+- TypeScript
+- Redux Toolkit
+- Styled Components
+- React Router
+- API REST
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Funcionalidades
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Listagem dinâmica de restaurantes
+- Visualização de cardápios
+- Carrinho de compras
+- Controle de quantidade de itens
+- Checkout com formulário
+- Integração com API REST
+- Gerenciamento global de estado com Redux
 
-### `npm test`
+## Objetivos do Projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Este projeto foi desenvolvido para consolidar conhecimentos em:
 
-### `npm run build`
+- Componentização
+- Gerenciamento de estado global
+- Consumo de APIs
+- Tipagem com TypeScript
+- Navegação entre páginas
+- Boas práticas de desenvolvimento Front-End
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Demonstração
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🔗 https://e-clothes-moinhos.vercel.app
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Autor
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Deivith Maciel
